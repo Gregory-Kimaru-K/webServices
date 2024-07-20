@@ -21,7 +21,6 @@ if response.status_code == 200:
             img_url = urljoin(url, img_url)
             img_name = os.path.basename(img_url)
             img_path = os.path.join('images', img_name)
-
             img_response = requests.get(img_url, stream=True)
 
             if img_response.status_code == 200:
